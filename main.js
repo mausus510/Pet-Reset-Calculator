@@ -14,6 +14,7 @@ function createWindow() {
       contextIsolation: true,  // Enable contextIsolation
       preload: path.join(__dirname, 'preload.js'),  // Correctly specify the preload script path
       sandbox: false, // fixes require() in preloader
+      additionalArguments: [`NODE_ENV=${process.env.NODE_ENV || 'production'}`], // TODO: Change to production when building
     }
   });
 

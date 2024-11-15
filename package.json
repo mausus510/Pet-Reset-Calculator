@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder",  
-    "dist": "electron-builder"    
+    "build": "electron-builder",
+    "dist": "electron-builder"
   },
   "author": "Mausus™",
   "license": "ISC",
@@ -25,6 +25,12 @@
     "files": [
       "**/*",
       "images/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "images",
+        "to": "images"
+      }
     ],
     "win": {
       "target": "portable",
