@@ -49,3 +49,24 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDrinkImage('default');
   });
   
+     // Calculation logic
+     function calculateResult(drink, mainAttribute, petLevel) {
+        const formulas = {
+            milk: (x, y) => Math.floor((x / 10) + (y / 10) + 4),
+            juice: (x, y) => Math.floor((x / 8) + (y / 8) + 6),
+            coffee: (x, y) => Math.floor((x / 6) + (y / 6) + 8),
+            soda: (x, y) => Math.floor((x / 5) + (y / 5) + 10),
+            cola: (x, y) => Math.floor((x / 4) + (y / 4) + 12),
+            champagne: (x, y) => Math.floor((x / 3) + (y / 3) + 14),
+            water: (x, y) => Math.floor((x / 2) + (y / 2) + 16),
+            'chicken essence': (x, y) => Math.floor((x / 1.5) + (y / 1.5) + 22),
+            'ginseng soup': (x, y) => Math.floor((x * 0.75) + (y * 0.75) + 32),
+        };
+
+        return formulas[drink] ? formulas[drink](mainAttribute, petLevel) : "Invalid drink choice";
+    }
+
+       // Helper function to capitalize the drink name
+       function capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
