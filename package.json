@@ -1,0 +1,34 @@
+{
+  "name": "pet_reset_calculator",
+  "version": "1.0.0",
+  "description": "Calculates attribute of pet when reset with downgrade item.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",  
+    "dist": "electron-builder"    
+  },
+  "author": "Mausus™",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "boolean": "^3.2.0",
+    "buffer-crc32": "^0.2.13"
+  },
+  "build": {
+    "appId": "com.mausus.petresetcalculator",
+    "productName": "Pet Reset Calculator",
+    "files": [
+      "**/*",
+      "images/**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "default.ico"
+    }
+  }
+}

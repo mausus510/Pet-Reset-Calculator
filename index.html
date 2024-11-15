@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self';">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pet Reset Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the Pet Reset Calculator!</h1>
+
+        <!-- Form for entering pet data -->
+        <div class="form-group">
+            <label for="petLevel">Pet's Level (e.g., 1, 2, 3):</label>
+            <input type="number" id="petLevel" placeholder="Enter pet level" min="1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mainAttribute">Main Attribute Number:</label>
+            <input type="number" id="mainAttribute" placeholder="Enter main attribute" min="1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="drinkChoice">Choose a Drink:</label>
+            <select id="drinkChoice" required>
+                <option value="" disabled selected>Select a drink</option>
+                <option value="milk">Milk</option>
+                <option value="juice">Juice</option>
+                <option value="coffee">Coffee</option>
+                <option value="soda">Soda</option>
+                <option value="cola">Cola</option>
+                <option value="champagne">Champagne</option>
+                <option value="water">Water</option>
+                <option value="chicken essence">Chicken Essence</option>
+                <option value="ginseng soup">Ginseng Soup</option>
+            </select>
+        </div>
+
+        <div id="drinkImageContainer">
+            <img id="drinkImage" src="images/milk.PNG" alt="Drink Image" />
+        </div>
+
+        <button id="calculateBtn">Calculate Result</button>
+
+        <!-- Display the result -->
+        <div class="result">
+            <p id="resultText">The result will be shown here.</p>
+        </div>
+
+        <button id="resetBtn">Reset</button>
+
+        <!-- Note Section Below Reset Button -->
+        <p id="note">Created by Mausus&trade;</p>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
